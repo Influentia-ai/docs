@@ -16,7 +16,7 @@ export default function Home() {
                 </h1>
 
                 <p className="hero__subtitle" style={{maxWidth: '840px'}}>
-                    Current AI tools can write subject lines and replies, but can't build
+                    Current AI tools can write subject lines and replies but can't build
                     customer journeys that adapts in real-time to individual behavior. They are still following a static
                     playbook, just with better grammar.
                 </p>
