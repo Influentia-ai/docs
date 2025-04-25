@@ -147,14 +147,14 @@ Influentia directly impacts your key metrics:
 
 In the following sections, we'll show how to implement each component based on your startup stage:
 
-- [Event Ingestion & Processing (Capture API)](./capture-api.md) - Start capturing product usage without complex data
+- [Event Ingestion & Processing (Capture API)](/coming-soon) - Start capturing product usage without complex data
   infrastructure
-- [Data Synchronization (Sync Service)](./sync-service.md) - Connect your billing, CRM, and support systems
-- [Workflow Automation Engine](./workflow-engine.md) - Build your first automated customer journeys
-- [Segmentation Engine](./segmentation-engine.md) - Create dynamic user segments that update in real-time
-- [ZeroFlow AI Architecture](./zeroflow.md) - Deploy autonomous customer success at scale
-- [Event Workers & Task Processing](./event-workers.md) - Ensure reliable execution of customer communications
-- [Data Modeling & Infrastructure](./data-infrastructure.md) - Scale your data foundation as you grow
+- [Data Synchronization (Sync Service)](/coming-soon) - Connect your billing, CRM, and support systems
+- [Workflow Automation Engine](/coming-soon) - Build your first automated customer journeys
+- [Segmentation Engine](/coming-soon) - Create dynamic user segments that update in real-time
+- [ZeroFlow AI Architecture](/coming-soon) - Deploy autonomous customer success at scale
+- [Event Workers & Task Processing](/coming-soon) - Ensure reliable execution of customer communications
+- [Data Modeling & Infrastructure](/coming-soon) - Scale your data foundation as you grow
 
 Each section is designed to provide practical implementation guidance for technical founders and early engineering
 teams, with consideration for the resource constraints typical at each funding stage.
