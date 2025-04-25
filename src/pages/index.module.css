@@ -1,0 +1,221 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+    .heroBanner {
+        padding: 2rem;
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero Section */
+.hero {
+    padding: 8rem 1rem 6rem;
+    text-align: center;
+    background-size: cover;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    max-width: 46rem;
+    margin: 0 auto 2.5rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Section Styling */
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.centerText {
+    max-width: 46rem;
+    margin: 0 auto 2rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.insightText {
+    margin-top: 2.5rem;
+    font-style: italic;
+    text-align: center;
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #555;
+}
+
+/* Card Components */
+.cardNumber {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--ifm-color-accent-yellow);
+}
+
+/* Image Container */
+.imageContainer {
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 900px;
+}
+
+/* Implementation Steps */
+.stepsContainer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    margin-bottom: 2.5rem;
+    align-items: flex-start;
+}
+
+.stepNumber {
+    background-color: var(--ifm-color-accent-yellow);
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.stepContent {
+    flex: 1;
+}
+
+.stepContent h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* Testimonials */
+.testimonialsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonialCard {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonialContent {
+    flex: 1;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: #444;
+    line-height: 1.6;
+}
+
+.testimonialAuthor {
+    display: flex;
+    align-items: center;
+}
+
+.testimonialAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #eee;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    /* You could add a background-image for actual avatars */
+}
+
+.testimonialName {
+    font-weight: 600;
+    margin: 0;
+}
+
+.testimonialRole {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* CTA Section */
+.ctaSection {
+    padding: 6rem 1rem;
+    text-align: center;
+    background-size: cover;
+}
+
+.ctaButtonContainer {
+    margin-top: 2.5rem;
+}
+
+/* Dark mode adjustments */
+
+[data-theme='dark'] .heroSubtitle {
+    color: #aaa;
+}
+
+[data-theme='dark'] .insightText {
+    color: #aaa;
+}
+
+[data-theme='dark'] .testimonialCard {
+    background-color: #2a2a2a;
+}
+
+[data-theme='dark'] .testimonialContent {
+    color: #ddd;
+}
+
+[data-theme='dark'] .testimonialRole {
+    color: #aaa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stepNumber {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .cardNumber {
+        text-align: center;
+    }
+}

@@ -1,0 +1,476 @@
+/* src/css/custom.css */
+/* Animation for cards on hover */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced section transitions */
+.section {
+    position: relative;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced card styling */
+.card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    height: 100%;
+}
+
+[data-theme='dark'] .card {
+    border-color: #333;
+    background-color: #252525;
+}
+
+/* Improved heading spacing */
+h2.section-h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* Improved button styling */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-weight: 600;
+}
+
+
+.footer--dark {
+    --ifm-footer-background-color: #000000;
+}
+
+/* Define your accent color */
+:root {
+
+    --ifm-font-family-base: 'Inter', sans-serif;
+
+
+    --ifm-color-accent-yellow: #FFD700; /* Adjust this hex code to the exact yellow */
+    --ifm-color-accent: #ffe94c; /* yellow high-lighter */
+
+    /* --- Light Theme Adjustments --- */
+
+    /* Set primary color (used for links, some highlights by default) */
+    --ifm-color-primary: #1c1e21; /* Dark color for text/links */
+    --ifm-color-primary-dark: #1a1c1e;
+    --ifm-color-primary-darker: #181a1c;
+    --ifm-color-primary-darkest: #131516;
+    --ifm-color-primary-light: #1e2024;
+    --ifm-color-primary-lighter: #202226;
+    --ifm-color-primary-lightest: #25282c;
+
+    /* Set base background and text colors */
+    --ifm-background-color: #ffffff; /* White background */
+    --ifm-font-color-base: #1c1e21; /* Dark text */
+
+    /* Link colors */
+    --ifm-link-color: #1c1e21; /* Use base text color for links */
+    --ifm-link-hover-color: var(--ifm-color-accent-yellow); /* Yellow on hover */
+    --ifm-link-hover-decoration: underline;
+
+    /* Code block styling (Light theme) */
+    --ifm-code-background: #f6f7f8; /* Light grey background for code */
+    --ifm-pre-background: #f6f7f8;
+
+    /* Adjust spacing and borders */
+    --ifm-global-spacing: 1rem;
+    --ifm-container-width-xl: 1140px; /* Adjust max width if needed */
+    --ifm-hr-border-color: #eeeeee; /* Lighter horizontal rules */
+
+}
+
+/* --- Dark Theme Adjustments (Optional but recommended) --- */
+/* Match the dark UI blocks seen in the image */
+[data-theme='dark'] {
+    --ifm-color-accent-yellow: #FFD700; /* Ensure accent is defined */
+
+    --ifm-color-primary: #eeeeee; /* Light color for text/links in dark mode */
+    --ifm-color-primary-dark: #dcdcdc;
+    --ifm-color-primary-darker: #cccccc;
+    --ifm-color-primary-darkest: #aeaeae;
+    --ifm-color-primary-light: #ffffff;
+    --ifm-color-primary-lighter: #ffffff;
+    --ifm-color-primary-lightest: #ffffff;
+
+    --ifm-background-color: #1e1e1e; /* Dark background like the UI mockups */
+    --ifm-font-color-base: #eeeeee; /* Light text */
+
+    --ifm-link-color: var(--ifm-color-accent-yellow); /* Yellow links in dark mode */
+    --ifm-link-hover-color: #ffffff; /* White on hover */
+
+    /* Code block styling (Dark theme) */
+    --ifm-code-background: #282c34; /* Standard dark code background */
+    --ifm-pre-background: #282c34;
+    --ifm-hr-border-color: #444444; /* Darker horizontal rules */
+}
+
+.megaHeading {
+    /* fluid sizing: 40 px on small phones → 72 px on big monitors  */
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-weight: 800; /* heavier than the rest      */
+    line-height: 1.15;
+    letter-spacing: -.015em; /* nice optical tightening    */
+    margin: 8rem auto 2.5rem;
+}
+
+.section {
+    padding: 5rem 1rem;
+    text-align: center;
+}
+
+.small-caps {
+    font-variant-caps: all-small-caps;
+    letter-spacing: .15em;
+    font-weight: 600;
+    color: #666;
+}
+
+.highlight {
+    background-image: linear-gradient(180deg, var(--ifm-color-accent) 0%, var(--ifm-color-accent) 95%, transparent 45%);
+    margin: -2px -4px;
+    padding: 0px 2px;
+}
+
+.shadow-img {
+    box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .12);
+    border-radius: 6px;
+    width: 100%;
+    max-width: 760px;
+}
+
+/***** headlines *****/
+.hero__title {
+    font-size: 2.8rem;
+    line-height: 1.15;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+    max-width: 70rem;
+}
+
+.hero__subtitle {
+    max-width: 46rem;
+    margin: 0 auto 2.5rem;
+    color: #444;
+    font-size: 1.25rem;
+}
+
+h2.section-h2 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    font-weight: 700;
+    max-width: 46rem;
+    margin: 0 auto 3rem;
+}
+
+/***** button *****/
+.btn-primary {
+    background: #000;
+    color: #fff;
+    border: 2px solid #000;
+    border-radius: 6px;
+    padding: .75rem 1.75rem;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.btn-primary:hover {
+    background: #fff;
+    color: #000;
+}
+
+/***** simple card grid *****/
+.grid-2, .grid-3 {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+}
+
+.grid-2 {
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.card-icon {
+    font-size: 2rem;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+/***** FAQ accordion *****/
+details {
+    border-top: 1px solid #eee;
+    padding: 1rem 0;
+}
+
+details summary {
+    cursor: pointer;
+    list-style: none;
+    font-weight: 600;
+}
+
+details[open] summary {
+    color: #000;
+}
+
+/* --- Custom Styling for Specific Elements --- */
+
+/* Highlighted Text (using Markdown `==text==`) */
+mark {
+    background-color: var(--ifm-color-accent-yellow);
+    color: var(--ifm-font-color-base); /* Or maybe black #000000 */
+    padding: 0.1em 0.2em;
+    border-radius: 3px;
+}
+
+/* Button Styling */
+.button.button--primary {
+    background: #000;
+    border: 2px solid #000;
+    color: #fff;
+    padding: .75rem 1.75rem;
+}
+
+.button.button--primary:hover {
+    background-color: #e6c300; /* Slightly darker yellow on hover */
+    border-color: #e6c300;
+}
+
+/* Secondary button (example: outline style) */
+.button.button--secondary {
+    background-color: var(--ifm-color-accent-yellow);
+    border-color: var(--ifm-color-accent-yellow);
+    padding: .75rem 1.75rem;
+    color: #000000; /* Black text on yellow button */
+}
+
+.button.button--secondary:hover {
+    background-color: #e6c300; /* Slightly darker yellow on hover */
+    border-color: #e6c300;
+}
+
+
+/* Center images */
+article img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    margin-top: var(--ifm-leading);
+    margin-bottom: var(--ifm-leading);
+}
+
+/* Style for headings if needed (e.g., adding underline) */
+article h1, article h2, article h3 {
+    /* Example: Add a subtle bottom border */
+    /* border-bottom: 1px solid var(--ifm-hr-border-color); */
+    /* padding-bottom: 0.3em; */
+    /* margin-bottom: 1em; */
+}
+
+/* Specific styling for the dark UI mockup boxes if needed */
+.dark-ui-mockup {
+    background-color: #1e1e1e; /* Match dark theme background */
+    color: #eeeeee;
+    padding: var(--ifm-global-spacing);
+    border: 1px solid #444444;
+    border-radius: var(--ifm-global-radius);
+    margin-top: var(--ifm-leading);
+    margin-bottom: var(--ifm-leading);
+}
+
+.dark-ui-mockup p, .dark-ui-mockup code { /* Adjust text color inside */
+    color: #eeeeee;
+}
+
+/* ────────── ROADMAP / TIMELINE ────────── */
+
+.roadmap {
+    position: relative;
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+/* vertical line */
+.roadmap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 18px; /* aligns with marker */
+    width: 2px;
+    height: 100%;
+    background: #eaeaea;
+}
+
+/* flex row that holds the bullet + card */
+.timelineRow {
+    position: relative;
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* circular bullet */
+.timelineMarker {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--ifm-color-accent-yellow);
+    margin-top: 4px; /* aligns with title baseline */
+    flex-shrink: 0;
+}
+
+/* adjust the normal card look for timeline */
+.timelineCard {
+    width: 100%;
+    padding: 1.75rem 1.5rem;
+}
+
+/* give the “current / in progress” card a lift */
+.timelineCard--current {
+    border-color: var(--ifm-color-accent-yellow);
+    box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .06);
+}
+
+/* small pill badge */
+.badge {
+    background: var(--ifm-color-accent-yellow);
+    color: #000;
+    font-size: .75rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+/* ─── timeline bullet colour tweak ─── */
+.timelineMarker--current {
+    background: #000;
+}
+
+/* ─── responsive 16:9 video wrapper ─── */
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    margin-top: 1.5rem;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ─── simple modal ─────────────────────────────────────── */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, .6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalBox {
+    background: #1c1e21;
+    color: #fff;
+    padding: 2rem 1.75rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+    box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, .2);
+}
+
+.modalClose {
+    position: absolute;
+    top: .65rem;
+    right: .8rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modalTitle {
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.modalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modalForm label {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    font-size: .9rem
+}
+
+.modalForm input {
+    padding: .6rem .75rem;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background: #25282c;
+    color: #fff;
+    font-size: .95rem;
+    width: 100%;
+}
+
+.modalPre {
+    background: #25282c;
+    color: #767676;
+    border: 1px solid #444;
+    border-right: none;
+    padding: .6rem .5rem;
+    border-radius: 6px 0 0 6px;
+    font-size: .9rem;
+}
+
+.modalError {
+    color: #ff9494;
+    font-size: .85rem;
+}
