@@ -16,7 +16,7 @@ export default function Home() {
                 </h1>
 
                 <p className="hero__subtitle" style={{maxWidth: '840px'}}>
-                    Current AI tools can write subject lines, replies and generate static flows, but can't build
+                    Current AI tools can write subject lines and replies, but can't build
                     customer journeys that adapts in real-time to individual behavior. They are still following a static
                     playbook, just with better grammar.
                 </p>
@@ -104,11 +104,11 @@ export default function Home() {
                         </li>
 
                         <li><b>The Human Bottleneck:</b> Your best customer success happens with human involvement, but
-                            humans don't scale—forcing you to choose which customers deserve relationships.
+                            humans don't scale, forcing you to choose which customers deserve relationships.
                         </li>
                     </ul>
                     <p style={{marginTop: '1.5rem'}}>
-                        The gap isn't in content creation—it's in building individual relationships that adapt without
+                        The gap isn't in content creation, it's in building individual relationships that adapt without
                         constant human intervention.
                     </p>
                 </div>
@@ -129,10 +129,10 @@ export default function Home() {
                     Influentia is the AI co-pilot your Customer Success team needs. It’s like deploying a
                     data-driven CSM dedicated to <i>every single user</i>. By unifying and understanding
                     customer data, Influentia autonomously identifies critical moments and takes
-                    personalized, timely action—freeing your team to focus on high-impact relationships.
+                    personalized, timely action, freeing your team to focus on high-impact relationships.
                 </p>
 
-                <img src="/img/zeroflow.svg" width="80%" style={{maxWidth: '2160px'}}/>
+                <img src="/img/zeroflow.svg" width="100%" style={{maxWidth: '1480px'}}/>
             </section>
 
 
@@ -163,7 +163,7 @@ export default function Home() {
                         },
                         {
                             title: 'Personalized Multi-Channel Actions',
-                            text: 'Email, tasks, soon in-app messages—at exactly the right moment.',
+                            text: 'Email, tasks, soon in-app messages, at exactly the right moment.',
                             icon: '✉️',
                         },
                         {
@@ -234,7 +234,7 @@ export default function Home() {
             </section>
 
             {/* =========================================================
-         SOCIAL PROOF  (placeholder — remove if not used)
+         SOCIAL PROOF  (placeholder ,  remove if not used)
       ========================================================== */}
             {/*<section className="section dark-ui-mockup" style={{maxWidth: '720px', margin: '0 auto'}}>*/}
             {/*    <p className="small-caps" style={{color: 'var(--ifm-color-accent-yellow)'}}>Social Proof</p>*/}
