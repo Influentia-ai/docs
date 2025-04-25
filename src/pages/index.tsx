@@ -12,7 +12,7 @@ export default function Home() {
       ========================================================== */}
             <header className="section">
                 <h1 className="megaHeading">
-                    Your AI tools generate content,<br/>not relationships.
+                    Your AI tools generate content,<br/>not engagement.
                 </h1>
 
                 <p className="hero__subtitle" style={{maxWidth: '840px'}}>
@@ -85,14 +85,14 @@ export default function Home() {
             <section className="section" style={{background: '#f9f9f9'}}>
                 <p className="small-caps">The Problem</p>
                 <h2 className="section-h2">
-                    AI Has Made Content <span className="highlight">Scalable</span>, But Relationships <span
+                    AI Has Made Content <span className="highlight">Scalable</span>, But Engagement <span
                     className="highlight">Remain Elusive</span>
                 </h2>
 
                 <div style={{maxWidth: '720px', margin: '0 auto', textAlign: 'left'}}>
                     <ul>
                         <li><b>AI Creates Messages, Not Journeys:</b> Current tools can generate perfect emails but
-                            can't build adaptive relationships that evolve with each customer interaction.
+                            can't build adaptive engagement that evolve with each customer interaction.
                         </li>
 
                         <li><b>Static Intelligence:</b> Your AI follows pre-defined playbooks with better language, but
@@ -104,11 +104,11 @@ export default function Home() {
                         </li>
 
                         <li><b>The Human Bottleneck:</b> Your best customer success happens with human involvement, but
-                            humans don't scale, forcing you to choose which customers deserve relationships.
+                            humans don't scale, forcing you to choose which customers deserve engagement.
                         </li>
                     </ul>
                     <p style={{marginTop: '1.5rem'}}>
-                        The gap isn't in content creation, it's in building individual relationships that adapt without
+                        The gap isn't in content creation, it's in building individual engagement that adapt without
                         constant human intervention.
                     </p>
                 </div>
