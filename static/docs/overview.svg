@@ -113,8 +113,7 @@
 
     <!-- Cross links load balancers to other APIs for redundancy -->
 
-    <path d="M290 124 C290 155, 500 155, 500 190" stroke="#bbb" stroke-width="1.2" marker-end="url(#arrow)"
-          fill="none"/>
+
     <path d="M710 124 C710 155, 500 155, 500 190" stroke="#bbb" stroke-width="1.2" marker-end="url(#arrow)"
           fill="none"/>
 
