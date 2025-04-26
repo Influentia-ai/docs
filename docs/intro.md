@@ -67,7 +67,7 @@ flowchart TD
    direction LR
    API1[Web&nbsp;API]
    API2[Campaign&nbsp;&amp;&nbsp;Integration&nbsp;API]
-   API3[Event&nbsp;Ingestion&nbsp;Capture&nbsp;API]
+   API3[Event&nbsp;Ingestion]
    end
    
    EW[Event&nbsp;Workers&nbsp;&amp;&nbsp;Processing]
@@ -89,7 +89,7 @@ flowchart TD
    subgraph EXTGRP[External Systems]
    direction LR
    EXT[External&nbsp;Data&nbsp;Sources]
-   MSG[Messaging&nbsp;Services]
+   MSG[Messaging&nbsp;Channels]
    WH[Webhooks&nbsp;/&nbsp;Destinations]
    end
    
@@ -119,7 +119,7 @@ flowchart TD
    
    %% Core services → external systems
    SS <--> EXT
-   AI --> MSG
+   AI <--> MSG
    WF --> WH
    EW --> WH
    
