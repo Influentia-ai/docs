@@ -47,96 +47,96 @@ Influentia's architecture is designed as a composable system with specialized co
 intelligent, adaptive customer success automation:
 ```mermaid
 flowchart TD
-%% ───────────────────────────────
-%%  Clients & Load-balancers
-%% ───────────────────────────────
-   FE[Frontend]
-   SDK[Client&nbsp;/&nbsp;SDK]
-
-FE --> LB1(Load&nbsp;Balancer&nbsp;1)
-SDK --> LB2(Load&nbsp;Balancer&nbsp;2)
-
-%% ───────────────────────────────
-%%  Processing & Business Logic
-%% ───────────────────────────────
-subgraph BL[Processing & Business Logic]
-direction TB
-
-%% --- API layer ---
-subgraph API[]
-direction LR
-API1[Web&nbsp;API]
-API2[Campaign&nbsp;&amp;&nbsp;Integration&nbsp;API]
-API3[Event&nbsp;Ingestion&nbsp;Capture&nbsp;API]
-end
-
-EW[Event&nbsp;Workers&nbsp;&amp;&nbsp;Processing]
-MA@{ shape: docs, label: "Multi Agents System"}
-
-%% --- Core services (single line) ---
-subgraph CORE[]
-direction LR
-SS[Sync&nbsp;Service]
-WF[Workflow&nbsp;Automaton&nbsp;Engine]
-AI[Autonomous&nbsp;CSM&nbsp;AI&nbsp;Agent]
-SEG[Segmentation&nbsp;Engine]
-end
-end
-
-%% ───────────────────────────────
-%%  External Systems
-%% ───────────────────────────────
-subgraph EXTGRP[External Systems]
-direction LR
-EXT[External&nbsp;Data&nbsp;Sources]
-MSG[Messaging&nbsp;Services]
-WH[Webhooks&nbsp;/&nbsp;Destinations]
-end
-
-%% ───────────────────────────────
-%%  Connections
-%% ───────────────────────────────
-%% LB → APIs
-LB2 --> API2
-LB2 --> API3
-LB1 --> API2
-LB1 --> API1
-
-API1 -.-> MA
-
-%% APIs → Event workers
-API2 --> EW
-API3 --> EW
-
-%% Event workers → core services
-EW <--> SS
-EW <--> WF
-EW <--> AI
-EW <--> SEG
-
-%% Cross-service links
-WF <-.-> AI
-
-%% Core services → external systems
-SS <--> EXT
-AI --> MSG
-WF --> WH
-EW --> WH
-
-%% ───────────────────────────────
-%%  Styling (optional)
-%% ───────────────────────────────
-classDef lb       fill: #8EC2FA,stroke: #3C89F5, color: #000;
-classDef api      fill: #FFF, stroke: #8653B5, color: #000;
-classDef proc     fill: #FFE0C8,stroke: #E09A66, color: #000;
-classDef service  fill: #FFF, stroke: #8653B5, color: #000;
-classDef external fill: #FFF,stroke: #646464, color: #000;
-
-class LB1, LB2 lb;
-class API1,API2, API3 api;
-class EW proc;
-class FE, SDK, SS, WF,AI, SEG service;
-class EXT, MSG, WH external;
+   %% ───────────────────────────────
+   %%  Clients & Load-balancers
+   %% ───────────────────────────────
+      FE[Frontend]
+      SDK[Client&nbsp;/&nbsp;SDK]
+   
+   FE  --> LB1(Load&nbsp;Balancer&nbsp;1)
+   SDK --> LB2(Load&nbsp;Balancer&nbsp;2)
+   
+   %% ───────────────────────────────
+   %%  Processing & Business Logic
+   %% ───────────────────────────────
+   subgraph BL[Processing & Business Logic]
+   direction TB
+   
+   %% --- API layer ---
+   subgraph API[ ]
+   direction LR
+   API1[Web&nbsp;API]
+   API2[Campaign&nbsp;&amp;&nbsp;Integration&nbsp;API]
+   API3[Event&nbsp;Ingestion&nbsp;Capture&nbsp;API]
+   end
+   
+   EW[Event&nbsp;Workers&nbsp;&amp;&nbsp;Processing]
+   MA@{ shape: docs, label: "Multi Agents System"}
+   
+   %% --- Core services (single line) ---
+   subgraph CORE[ ]
+   direction LR
+   SS[Sync&nbsp;Service]
+   WF[Workflow&nbsp;Automaton&nbsp;Engine]
+   AI[Autonomous&nbsp;CSM&nbsp;AI&nbsp;Agent]
+   SEG[Segmentation&nbsp;Engine]
+   end
+   end
+   
+   %% ───────────────────────────────
+   %%  External Systems
+   %% ───────────────────────────────
+   subgraph EXTGRP[External Systems]
+   direction LR
+   EXT[External&nbsp;Data&nbsp;Sources]
+   MSG[Messaging&nbsp;Services]
+   WH[Webhooks&nbsp;/&nbsp;Destinations]
+   end
+   
+   %% ───────────────────────────────
+   %%  Connections
+   %% ───────────────────────────────
+   %% LB → APIs
+   LB2 --> API2
+   LB2 --> API3
+   LB1 --> API2
+   LB1 --> API1
+      
+   API1 -.-> MA
+   
+   %% APIs → Event workers
+   API2 --> EW
+   API3 --> EW
+   
+   %% Event workers → core services
+   EW <--> SS
+   EW <--> WF
+   EW <--> AI
+   EW <--> SEG
+   
+   %% Cross-service links
+   WF <-.-> AI
+   
+   %% Core services → external systems
+   SS <--> EXT
+   AI --> MSG
+   WF --> WH
+   EW --> WH
+   
+   %% ───────────────────────────────
+   %%  Styling (optional)
+   %% ───────────────────────────────
+   classDef lb       fill:#8EC2FA,stroke:#3C89F5,color:#000;
+   classDef api      fill:#FFF,stroke:#8653B5,color:#000;
+   classDef proc     fill:#FFE0C8,stroke:#E09A66,color:#000;
+   classDef service  fill:#FFF,stroke:#8653B5,color:#000;
+   classDef external fill:#FFF,stroke:#646464,color:#000;
+   
+   class LB1,LB2 lb;
+   class API1,API2,API3 api;
+   class EW proc;
+   class FE,SDK,SS,WF,AI,SEG service;
+   class EXT,MSG,WH external;
 ```
 
 ### Key Components
