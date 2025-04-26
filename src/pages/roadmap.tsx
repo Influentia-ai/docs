@@ -20,11 +20,11 @@ const roadmap = [
     },
     {
         version: 'Version 2',
-        items: ['ZeroFlow™', 'Custom object types', 'Person groups'],
+        items: ['ZeroFlow™', 'Custom object types', 'Person groups', 'A/B testing'],
     },
     {
         version: 'Version 3',
-        items: ['Complete CDP', 'WhatsApp, SMS & RCS', 'More SDKs'],
+        items: ['Complete CDP', 'WhatsApp, SMS & RCS', 'More SDKs', 'Push Notifications'],
     },
     {
         version: 'Version 4',
@@ -32,6 +32,7 @@ const roadmap = [
             'Inbound messaging & automatic responses',
             'Custom Dashboad',
             'Bring-your-own agent',
+            'More channels e.g Instagram, Facebook, etc'
         ],
     },
 ];
@@ -75,18 +76,21 @@ export default function Roadmap() {
                                 </div>
 
                                 <ul style={{margin: '1rem 0 0', paddingLeft: '1.25rem'}}>
-                                    {block.items.map(t => <li key={t}>{t}</li>)}
+                                    {block.items.map(t => <li style={{textAlign: "start"}} key={t}>{t}</li>)}
                                 </ul>
 
                                 {/* ─── optional demo video ─── */}
                                 {block.demoUrl && (
-                                    <div className="videoWrapper">
-                                        <iframe
-                                            src={block.demoUrl}
-                                            title={`${block.version} demo`}
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowFullScreen
-                                        />
+                                    <div>
+                                        <h3>See Our Demo Video</h3>
+                                        <div className="videoWrapper">
+                                            <iframe
+                                                src={block.demoUrl}
+                                                title={`${block.version} demo`}
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen
+                                            />
+                                        </div>
                                     </div>
                                 )}
                             </div>

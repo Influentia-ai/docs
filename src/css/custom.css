@@ -325,7 +325,7 @@ article h1, article h2, article h3 {
     content: '';
     position: absolute;
     top: 0;
-    left: 18px; /* aligns with marker */
+    left: 6px; /* aligns with marker */
     width: 2px;
     height: 100%;
     background: #eaeaea;
