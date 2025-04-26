@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import DemoRequestDialog from '../components/DemoRequestDialog';
 
+// See refine.dev as a perfect implementation of docusaurus
 export default function Home() {
     const [dialogOpen, setDialogOpen] = useState(false);
     return (
