@@ -45,7 +45,6 @@ Influentia introduces **ZeroFlow™** - purpose-built for SaaS startups to:
 
 Influentia's architecture is designed as a composable system with specialized components that work together to create
 intelligent, adaptive customer success automation:
-
 ```mermaid
 flowchart TD
 %% ───────────────────────────────
@@ -56,7 +55,7 @@ flowchart TD
 
 FE --> LB1(Load&nbsp;Balancer&nbsp;1)
 SDK --> LB2(Load&nbsp;Balancer&nbsp;2)
-   
+
 %% ───────────────────────────────
 %%  Processing & Business Logic
 %% ───────────────────────────────
