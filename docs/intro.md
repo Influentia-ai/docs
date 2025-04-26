@@ -2,33 +2,24 @@
 sidebar_position: 1
 ---
 
-# Influentia: The Autonomous CSM for Growing SaaS
+# Introduction
 
-Building a scalable customer success function that grows with your startup, not your headcount
+Welcome to Influentia's technical documentation. This guide introduces the architecture and components needed to build
+an autonomous customer success system capable of providing personalized 1:1 experiences at scale.
 
-## Introduction
+Influentia represents a fundamental shift in how companies approach customer success. Instead of forcing human teams to
+scale linearly with customer growth or relying on rigid, static automation flows, we're building a system that can
+autonomously manage customer relationships by understanding individual context, behavior, and needs.
 
-Welcome to Influentia's technical documentation. If you're a SaaS founder or early employee struggling to scale customer
-success without adding headcount, you're in the right place. This guide introduces the architecture behind an autonomous
-customer success system that delivers personalized experiences at scale.
+## The Problem: Current Solutions Don't Scale
 
-Influentia addresses the critical scaling challenge every successful SaaS faces: how to provide high-touch customer
-success to all users when you can't hire fast enough or dedicate CSMs to every account.
+Customer success as a function faces a scaling problem:
 
-## The SaaS Scaling Problem
+- **Human-only approaches** create incredible experiences but can't scale beyond the team's capacity
+- **Static automation flows** can reach everyone but deliver impersonal, one-size-fits-all experiences
+- **Basic AI tools** can generate content but lack the intelligence to build genuine relationships
 
-As your startup gains traction, customer success becomes a critical bottleneck:
-
-- **Pre-seed/Seed stage**: Founders personally handle customer success, creating amazing experiences but consuming
-  valuable time
-- **Early growth**: Your first CS hire can only handle 50-100 accounts, forcing you to segment by ARR and neglect
-  smaller accounts
-- **Scale-up phase**: Even with automation tools, you're stuck building rigid journeys that treat similar users
-  identically
-- **Expansion stage**: Your CS:Customer ratio becomes increasingly expensive as you scale, eating into margins
-
-The common solution—automation tools like Customer.io, Intercom, or Vitally—creates efficiency but sacrifices the
-personal touch that drove your early success.
+Current solutions force a choice between quality and scale. Influentia eliminates this false dichotomy.
 
 ## From Static Journeys to ZeroFlow™
 
@@ -50,59 +41,12 @@ Influentia introduces **ZeroFlow™** - purpose-built for SaaS startups to:
 - Eliminate the "big customers get humans, small customers get robots" divide
 - Adapt automatically to product changes without rebuilding automations
 
-## Modular Architecture for Resource-Constrained Teams
+## Modular Architecture: Building Blocks of Autonomous Customer Success
 
-Influentia's architecture is designed to grow with your startup through a modular approach that integrates with your
-existing stack:
-
-```mermaid
-graph TD
-    subgraph "Layer 4: Client Interaction & Interface"
-        Frontend["Frontend (Web UI)"]
-        Clients["Clients / SDKs"]
-    end
-
-    subgraph "Layer 3: API Gateway"
-        API["Core API Gateway"]
-    end
-
-    subgraph "Layer 2: Processing & Business Logic Engines"
-        Capture["Event Ingestion & Processing (Capture API)"]
-        Sync["Data Synchronization (Sync Service)"]
-        Workflow["Workflow Automation (Workflow Engine)"]
-        Segment["Segmentation Engine"]
-        AIFlow["AI-Driven Customer Success (AI Flow)"]
-    end
-
-    subgraph "Layer 1: Event Action & Dispatch"
-        EventWorkers["Event Workers"]
-    end
-
-    subgraph "Layer 0: Core Infrastructure & Data Storage"
-        DataStores["Data Stores (PostgreSQL, ClickHouse, Redis, S3)"]
-        MessageQueues["Messaging & Task Queues (Kafka, Temporal)"]
-    end
-
-    subgraph "External Systems"
-        DataSources["External Data Sources (Stripe, Hubspot..)"]
-        Messaging["Messaging Services (Email, etc)"]
-        Webhooks["Webhooks / Destinations"]
-    end
-
-    Frontend --> API
-    Clients --> Capture
-    API --> Capture
-    API --> Sync
-    Capture --> MessageQueues
-    Capture --> DataStores
-    Segment --> Capture
-    AIFlow --> Workflow
-    AIFlow --> Messaging
-    EventWorkers --> Webhooks
-    Sync <--> DataSources
-```
-
-### Key Components for SaaS Founders
+Influentia's architecture is designed as a composable system with specialized components that work together to create
+intelligent, adaptive customer success automation:
+<img src="/docs/overview.svg" alt="Description"  />
+### Key Components
 
 1. **Event Ingestion & Processing (Capture API)** - Connects to your product to capture user behaviors without requiring
    engineering team bandwidth.
@@ -116,14 +60,13 @@ graph TD
 4. **Segmentation Engine** - Creates dynamic user groups across product usage, billing, and engagement data to identify
    opportunities and risks.
 
-5. **AI-Driven Customer Success (ZeroFlow)** - The intelligent core that scales your best CSM's knowledge across your
-   entire customer base.
+5. **AI-Driven Customer Success (ZeroFlow)** - The intelligent core that scales your best CSM's knowledge and makes
+   autonomous decisions about when, how, and what to communicate to each individual user.
 
-6. **Event Workers & Task Queue** - Ensures reliable execution of time-sensitive communications without adding
-   infrastructure complexity.
+6. **Event Workers & Task Queue** - The operational backbone ensuring reliable execution of time-based and event-driven
+   processes.
 
-7. **Data Stores & Infrastructure** - Provides the foundation for data-driven decisions with minimal management
-   overhead.
+7. **Data Stores & Infrastructure** - The persistence layer supporting real-time decisions and historical analysis.
 
 ## Built for SaaS KPIs
 
@@ -140,25 +83,25 @@ Influentia directly impacts your key metrics:
 4. **Consistent Experience Across Tiers**: Enterprise-grade support experience for every customer, regardless of
    contract size.
 
-5. **Improved CS Team Efficiency**: Your human CS team focuses on high-value interactions while automation handles
-   routine engagement.
+## What's Next in This Documentation
 
-## Progressive Implementation for Growing Startups
+In the following sections, we'll dive deeper into each component of Influentia's architecture:
 
-In the following sections, we'll show how to implement each component based on your startup stage:
+- [Event Ingestion & Processing (Capture API)](/coming-soon)
+- [Data Synchronization (Sync Service)](/coming-soon)
+- [Workflow Automation Engine](/coming-soon)
+- [Segmentation Engine](/coming-soon)
+- [ZeroFlow AI Architecture](/coming-soon)
+- [Event Workers & Task Processing](/coming-soon)
+- [Data Modeling & Infrastructure](/coming-soon)
 
-- [Event Ingestion & Processing (Capture API)](/coming-soon) - Start capturing product usage without complex data
-  infrastructure
-- [Data Synchronization (Sync Service)](/coming-soon) - Connect your billing, CRM, and support systems
-- [Workflow Automation Engine](/coming-soon) - Build your first automated customer journeys
-- [Segmentation Engine](/coming-soon) - Create dynamic user segments that update in real-time
-- [ZeroFlow AI Architecture](/coming-soon) - Deploy autonomous customer success at scale
-- [Event Workers & Task Processing](/coming-soon) - Ensure reliable execution of customer communications
-- [Data Modeling & Infrastructure](/coming-soon) - Scale your data foundation as you grow
+Each section will explore the component's purpose, architecture, implementation considerations, and how it integrates
+with the broader system.
 
-Each section is designed to provide practical implementation guidance for technical founders and early engineering
-teams, with consideration for the resource constraints typical at each funding stage.
-
-Whether you're building in-house or considering Influentia as your customer success platform, this documentation
-provides the architectural blueprint for truly scalable, personalized customer engagement that grows with your SaaS
-business.
+Whether you're considering Influentia for your customer engagement needs or you're a technical founder interested in
+this space, this documentation serves a dual purpose. For potential customers, we're providing unprecedented
+transparency into the thought process and architecture behind our platform - because we believe you should understand
+the systems you depend on. For technical founders and builders, we're opening our blueprint as an invitation to
+contribute, learn alongside us, and perhaps even collaborate as we chart this new territory in autonomous customer
+success. This isn't just documentation; it's the beginning of a community around a shared vision for what customer
+engagement can become.

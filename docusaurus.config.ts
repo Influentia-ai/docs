@@ -105,7 +105,7 @@ const config: Config = {
                 // {to: '/blog', label: 'Blog', position: 'left'},
                 {to: '/roadmap', label: 'Road Map', position: 'left'},
                 {
-                    href: 'https://github.com/Influentia-ai/starter-docs',
+                    href: 'https://github.com/Influentia-ai/docs',
                     label: 'GitHub',
                     position: 'right',
                 },
