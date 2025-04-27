@@ -51,7 +51,7 @@ flowchart TD
    %%  Clients & Load-balancers
    %% ───────────────────────────────
       FE[Frontend]
-      SDK[Client&nbsp;/&nbsp;SDK]
+      SDK[Client&nbsp;/&nbsp;SDK&nbsp;/Webhooks]
    
    FE  --> LB1(Load&nbsp;Balancer&nbsp;1)
    SDK --> LB2(Load&nbsp;Balancer&nbsp;2)
@@ -119,7 +119,7 @@ flowchart TD
    
    %% Core services → external systems
    SS <--> EXT
-   AI <--> MSG
+   AI --> MSG
    WF --> WH
    EW --> WH
    

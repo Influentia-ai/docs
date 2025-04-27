@@ -133,7 +133,7 @@ export default function Home() {
                     personalized, timely action, freeing your team to focus on high-impact relationships.
                 </p>
 
-                <img src="/img/zeroflow.svg" width="100%" style={{maxWidth: '1480px'}}/>
+                <img src="/img/overview.svg" width="100%" style={{maxWidth: '1480px'}}/>
             </section>
 
 

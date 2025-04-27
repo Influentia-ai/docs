@@ -8,7 +8,7 @@ import {remarkKroki} from 'remark-kroki';
 const config: Config = {
     title: 'Influentia',
     tagline: 'Your smartest customer success manager, Scaled 1:1 for every user',
-    favicon: 'img/favicon.ico',
+    favicon: 'img/favicon.svg',
 
     // Set the production url of your site here
     url: 'https://influentia.ai',
