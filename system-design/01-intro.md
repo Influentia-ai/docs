@@ -1,13 +1,11 @@
 ---
-sidebar_position: 1
+description:  What it takes to build an Autonomous Customer Success Engine
 slug: /
-title: What it takes to build an Autonomous Customer Success Manager
 ---
 
 # Introduction
 
-Welcome to Influentia's technical documentation. This guide introduces the architecture and components needed to build
-an autonomous customer success system capable of providing personalized 1:1 experiences at scale.
+Welcome to Influentia's system  design documentation. This guide introduces the architecture and components needed to build  an autonomous customer success system capable of providing personalized 1:1 experiences at scale.
 
 Influentia represents a fundamental shift in how companies approach customer success. Instead of forcing human teams to
 scale linearly with customer growth or relying on rigid, static automation flows, we're building a system that can
@@ -43,7 +41,7 @@ Influentia introduces **ZeroFlow™** - purpose-built for SaaS startups to:
 - Eliminate the "big customers get humans, small customers get robots" divide
 - Adapt automatically to product changes without rebuilding automations
 
-## Modular Architecture: Building Blocks of Autonomous Customer Success
+## Modular Architecture: Building Blocks of a Autonomous Customer Success Engine
 
 Influentia's architecture is designed as a composable system with specialized components that work together to create
 intelligent, adaptive customer success automation:
@@ -180,15 +178,23 @@ Influentia directly impacts your key metrics:
 
 ## What's Next in This Documentation
 
-In the following sections, we'll dive deeper into each component of Influentia's architecture:
+In the following sections, we'll dive deeper into different parts of Influentia's architecture:
 
-- [Event Ingestion & Processing (Capture API)](/coming-soon)
-- [Data Synchronization (Sync Service)](/coming-soon)
-- [Workflow Automation Engine](/coming-soon)
-- [Segmentation Engine](/coming-soon)
-- [ZeroFlow AI Architecture](/coming-soon)
-- [Event Workers & Task Processing](/coming-soon)
-- [Data Modeling & Infrastructure](/coming-soon)
+- Part 1: Foundation API and Multi Agent
+- Part 2: Event Pipeline and Unifying Customer Data
+- Part 3: Connecting the Ecosystem - The Data Sync Service
+- Part 4: From Data to Basic Actions - Segmentation & Event Triggering
+- Part 5: Orchestrating Complexity - The Workflow Engine
+- Part 6: The Intelligence Layer - Designing the CSM AI Agent
+- Part 7: Messaging Channels
+- Part 8: Infrastructure and Scaling
+- Part 9: Conclusion - The Autonomous CSM in Practice
+
+
+
+
+
+
 
 Each section will explore the component's purpose, architecture, implementation considerations, and how it integrates
 with the broader system.
