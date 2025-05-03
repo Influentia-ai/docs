@@ -45,23 +45,24 @@ const config: Config = {
         [
             'classic',
             {
-                docs: {
-                    remarkPlugins: [
-                        [
-                            remarkKroki,
-                            {
-                                // ...options here
-                                alias: ['plantuml'],
-                                target: 'mdx3'
-                            }
-                        ]
-                    ],
-                    sidebarPath: './sidebars.ts',
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/Influentia-ai/docs',
-                },
+                docs: false,
+                //     {
+                //     remarkPlugins: [
+                //         [
+                //             remarkKroki,
+                //             {
+                //                 // ...options here
+                //                 alias: ['plantuml'],
+                //                 target: 'mdx3'
+                //             }
+                //         ]
+                //     ],
+                //     sidebarPath: './sidebars.ts',
+                //     // Please change this to your repo.
+                //     // Remove this to remove the "edit this page" links.
+                //     editUrl:
+                //         'https://github.com/Influentia-ai/docs',
+                // },
                 blog: {
                     showReadingTime: true,
                     feedOptions: {
@@ -83,7 +84,18 @@ const config: Config = {
             } satisfies Preset.Options,
         ],
     ],
-
+    plugins: [
+        [
+            '@docusaurus/plugin-content-docs',
+            {
+                id: 'system-design',
+                path: 'system-design',
+                routeBasePath: 'system-design',
+                sidebarPath:  undefined,
+                editUrl: "https://github.com/Influentia-ai/docs",
+            },
+        ],
+    ],
     themeConfig: {
         colorMode: {
             defaultMode: 'light',
@@ -99,13 +111,14 @@ const config: Config = {
                 src: 'img/logo.svg',
             },
             items: [
-                {
-                    type: 'docSidebar',
-                    sidebarId: 'tutorialSidebar',
-                    position: 'left',
-                    label: 'Docs',
-                },
+                // {
+                //     type: 'docSidebar',
+                //     sidebarId: 'tutorialSidebar',
+                //     position: 'left',
+                //     label: 'Docs',
+                // },
                 // {to: '/blog', label: 'Blog', position: 'left'},
+                {to: '/system-design', label: 'System Design', position: 'left'},
                 {to: '/roadmap', label: 'Road Map', position: 'left'},
                 {
                     href: 'https://github.com/Influentia-ai/docs',
