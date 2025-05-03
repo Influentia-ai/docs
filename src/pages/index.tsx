@@ -25,7 +25,7 @@ export default function Home() {
                 <div style={{display: 'flex', gap: '1rem', justifyContent: 'center'}}>
                     <Link
                         className="button button--primary"
-                        to="/docs/intro"
+                        to="/system-design"
                     >
                         Learn More
                     </Link>
