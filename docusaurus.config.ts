@@ -117,7 +117,7 @@ const config: Config = {
                 //     position: 'left',
                 //     label: 'Docs',
                 // },
-                {to: '/blog', label: 'Blog', position: 'left'},
+                // {to: '/blog', label: 'Blog', position: 'left'},
                 {to: '/system-design', label: 'System Design', position: 'left'},
                 {to: '/roadmap', label: 'Road Map', position: 'left'},
                 {

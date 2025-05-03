@@ -84,7 +84,7 @@ export default function DemoRequestDialog({open, onClose}) {
                                     <input
                                         type="text" required placeholder="yourcompany.com"
                                         value={website} onChange={e => setWebsite(e.target.value)}
-                                        style={{paddingLeft: 0, flex: 1}}
+                                        style={{paddingLeft: 0, flex: 1, borderRadius: '0px 6px 6px 0px'}}
                                     />
                                 </div>
                             </label>
